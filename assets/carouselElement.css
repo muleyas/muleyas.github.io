@@ -1,0 +1,78 @@
+.carousel .carousel-play-control  {
+	position: absolute;
+	left: 15px;
+	top: 12px;
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+	background: url("/img/carousel_play_pause_icons.png") no-repeat 0 0;
+}
+.carousel .carousel-play-control:hover  {
+	background-position: -70px 0;
+}
+.carousel .carousel-play-control.off {
+	background-position: -27px 0;
+}
+.carousel .carousel-play-control.off:hover {
+	background-position: -97px 0;
+}
+.carousel .carousel-inner {
+	/* this fixes the overflow:hidden in Chrome */
+	-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+	-webkit-backface-visibility:hidden; 
+	-moz-backface-visibility:hidden;
+	backface-visibility:hidden;
+}
+
+.carousel.carousel-fade .carousel-inner .item,
+.carousel.carousel-fade .carousel-caption {
+	opacity: 0;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+.carousel.carousel-fade .carousel-inner .active.left,
+.carousel.carousel-fade .carousel-inner .active.right {
+	left: 0;
+  	opacity: 0;
+	-webkit-transition: opacity 0.8s ease-in-out !important;
+  	z-index: 1;
+}
+.carousel.carousel-fade .carousel-control {
+  	z-index: 2;
+}
+.carousel.carousel-fade .carousel-inner .active,
+.carousel.carousel-fade .carousel-inner .next.left,
+.carousel.carousel-fade .carousel-inner .prev.right,
+.carousel.carousel-fade .carousel-inner .active .carousel-caption {
+	opacity: 1;
+}
+
+.carousel.carousel-verticalSlide .carousel-inner .item {
+	-webkit-transition: 0.6s ease-in-out top;
+  	-moz-transition: 0.6s ease-in-out top;
+  	-ms-transition: 0.6s ease-in-out top;
+  	-o-transition: 0.6s ease-in-out top;
+  	transition: 0.6s ease-in-out top;
+}
+.carousel.carousel-verticalSlide .carousel-inner .active,
+.carousel.carousel-verticalSlide .carousel-inner .next.left,
+.carousel.carousel-verticalSlide .carousel-inner .prev.right  {
+	top: 0;
+}
+.carousel.carousel-verticalSlide .carousel-inner .next,
+.carousel.carousel-verticalSlide .carousel-inner .active.right {
+	top: 100%;
+}
+.carousel.carousel-verticalSlide .carousel-inner .prev,
+.carousel.carousel-verticalSlide .carousel-inner .active.left {
+	top: -100%;
+}
+.carousel.carousel-verticalSlide .carousel-inner .item {
+	left: 0;
+}
